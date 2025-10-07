@@ -1,0 +1,7 @@
+__pycache__/
+.env
+.env.*
+.git
+.gitignore
+pytest_cache/
+uv.lock
