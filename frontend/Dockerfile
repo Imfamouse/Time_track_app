@@ -2,8 +2,8 @@ FROM node:20-bookworm-slim
 
 WORKDIR /app
 
-COPY package.json ./
-RUN corepack enable && pnpm install --config.strict-peer-dependencies=false
+COPY package.json pnpm-lock.yaml* ./
+RUN corepack enable && pnpm install --config.strict-peer-dependencies=false --frozen-lockfile=false
 
 COPY . .
 
