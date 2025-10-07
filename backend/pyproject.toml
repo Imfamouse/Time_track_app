@@ -3,21 +3,12 @@ name = "time-track-backend"
 version = "0.1.0"
 description = "Backend API for Time Track App"
 requires-python = ">=3.12"
-authors = [{ name = "Time Track Team", email = "team@<PLACEHOLDER>.corp" }]
+authors = [{ name = "Time Track Team", email = "team@timetrack.dev" }]
 readme = "README.md"
 dependencies = [
   "fastapi>=0.110",
   "uvicorn[standard]>=0.30",
-  "sqlalchemy>=2.0",
-  "alembic>=1.13",
   "pydantic>=2.6",
-  "structlog>=24.1",
-  "python-dotenv>=1.0",
-  "psycopg[binary]>=3.1",
-  "celery>=5.3",
-  "redis>=5.0",
-  "opentelemetry-sdk>=1.24",
-  "opentelemetry-exporter-otlp>=1.24"
 ]
 
 [project.optional-dependencies]
