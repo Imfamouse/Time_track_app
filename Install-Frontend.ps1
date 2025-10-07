@@ -59,6 +59,15 @@ if (-not (Test-Path ".env")) {
     Write-Host "[УСПЕХ] Файл .env создан" -ForegroundColor Green
 }
 
+# Копирование index.html в корень если его там нет
+if (-not (Test-Path "index.html")) {
+    if (Test-Path "public\index.html") {
+        Write-Host "[INFO] Копирование index.html в корень..." -ForegroundColor Green
+        Copy-Item -Path "public\index.html" -Destination "index.html" -Force
+        Write-Host "[УСПЕХ] Файл index.html скопирован" -ForegroundColor Green
+    }
+}
+
 Set-Location ..
 Write-Host ""
 Write-Host "====================================" -ForegroundColor Cyan

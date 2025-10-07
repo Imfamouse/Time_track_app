@@ -262,6 +262,26 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 3. Проверьте подключение к интернету
 4. Попробуйте использовать VPN если есть проблемы с доступом к репозиториям
 
+### Frontend показывает 404
+
+**Проблема:** При открытии http://localhost:5173 появляется ошибка 404
+
+**Решение:**
+1. Убедитесь, что файл `frontend/index.html` существует в корне директории frontend (не в public/)
+2. Если его нет, запустите скрипт исправления:
+   ```cmd
+   FIX_404.bat
+   ```
+   Или в PowerShell:
+   ```powershell
+   .\Fix-404.ps1
+   ```
+3. Или вручную скопируйте файл:
+   ```cmd
+   copy frontend\public\index.html frontend\index.html
+   ```
+4. Перезапустите frontend
+
 ### Backend не может подключиться к frontend
 
 **Проблема:** CORS ошибки в консоли браузера

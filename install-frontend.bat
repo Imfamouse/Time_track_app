@@ -61,6 +61,15 @@ if not exist .env (
     echo [УСПЕХ] Файл .env создан
 )
 
+REM Копирование index.html в корень если его там нет
+if not exist index.html (
+    if exist public\index.html (
+        echo [INFO] Копирование index.html в корень...
+        copy public\index.html index.html >nul 2>&1
+        echo [УСПЕХ] Файл index.html скопирован
+    )
+)
+
 cd ..
 echo.
 echo ====================================
