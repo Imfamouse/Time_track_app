@@ -12,6 +12,7 @@ __pycache__/
 .env.*
 .venv/
 uv.lock
+.venv/
 
 # Node.js
 node_modules/
